@@ -126,6 +126,15 @@ body {
         right: 185px;
         border-radius: 20px 0px 0px 20px;
     }
+    div.stay-safe__media {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    div.stay-safe__media {
+        padding: 0 0 0 47px;
+    }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -155,6 +164,12 @@ body {
     }
     h1.block-text__tittle{
         font-size: 34px;
+    }
+    div.stay-safe__container{
+        flex-direction: column;
+    }
+    h2.block-text__tittle {
+        font-size: 32px;
     }
 }
 
@@ -448,7 +463,6 @@ body {
 }
 .stay-safe__media{
     flex: 0 1 50%;
-    padding: 0 0 0 47px;
 }
 .stay-safe__content{
     flex: 0 1 50%;
@@ -503,3 +517,4 @@ body {
     right: 34px;
     bottom: 107px;
 }
+
