@@ -166,7 +166,7 @@ body {
         font-size: 34px;
     }
     div.stay-safe__container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     h2.block-text__tittle {
         font-size: 32px;
