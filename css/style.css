@@ -107,6 +107,9 @@ body {
     [class*="__container"]{
         max-width: 970px;
     }
+    div.healthcare__colum {
+        padding: 0px 15px ;
+    }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -128,6 +131,29 @@ body {
     }
     div.stay-safe__media {
         padding: 40px 0;
+    }
+    div.healthcare__items{
+        flex-direction: column;
+    }
+    div.healthcare__colum:not(:last-child){
+        margin: 0px 0px 25px 0px;
+    }
+    div.healthcare{
+        padding: 30px 0px 30px 0px;
+    }
+    div.item-healthcare_3::after {
+        display: none;
+    }
+    div.item-healthcare_3::before{
+        position: absolute;
+        content: "";
+        background-color: #EC5863;;
+        width: 65px;
+        height: 65px;
+        top: -35px;
+        left: 0px;
+        border-radius: 16px;
+        transform: rotate(-30deg);  
     }
 }
 
@@ -174,15 +200,47 @@ body {
     div.stay-safe__content{
         margin: 0 0 30px 0;
     }
+    div.experts__body{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    div.experts__video{
+        padding: 0px 0px 58% 0px;
+    }
+    div.experts__content{
+        padding: 0;
+        margin: 0px 0px 30px 0px;
+    }
+    div.experts{
+        padding: 80px 0px 30px 0px;
+    }
+    div.statistics-experts__body{
+        margin: 0px 0px 50px 0px;
+    }
+    div.body-statistics-experts{
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer.footer{
+        padding: 30px 0;
+    }
 }
 
 @media screen and (max-width: 479.98px) {
-    header.header__logo{
+    a.header__logo{
         flex: 0 0 40px;
         overflow: hidden;
     }
-    div.media-stay-safe {
-        width: 290px;
+    div.body-statistics-experts{
+        flex-direction: column;
+    }
+    div.body-statistics-experts__item:not(:last-child){
+        margin: 0px 0px 15px 0px;
+    }
+    div.footer__items {
+        flex-direction: column;
     }
 }
 
@@ -358,7 +416,9 @@ body {
 }
 
 /* block-text */
-
+.block-text-center {
+    text-align: center;
+}
 .block-text__tittle {
     font-weight: 700;
     line-height: 126%;
@@ -381,6 +441,10 @@ body {
 
 .block-text__text:not(:last-child){
     margin: 0 0 24px 0;
+}
+.block-text__text_mw{
+    max-width: 620px;
+    margin: 0 auto;   
 }
 
 /* get-started */
@@ -525,3 +589,212 @@ body {
     bottom: 107px;
 }
 
+/* experts */
+
+
+.experts {
+    background-color: #fafbfd;
+    padding: 103px 0px 116px 0px;
+}
+.experts__block-text{
+    max-width: 400px;
+}
+.statistics-experts {
+    max-width: 655px;
+    margin: 0px auto;
+    position: relative;
+}
+.experts__body{
+    display: flex;
+    align-items: center;
+}
+.experts__content{
+    flex: 0 1 50%;
+    padding: 0px 20px 0px 0px;
+}
+.experts__video{
+    flex: 0 1 50%;
+    padding: 0px 0px 30% 0px;
+    position: relative;
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    border-radius: 8px;
+}
+.experts__video iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.statistics-experts__body {
+    background-color: #fff;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    border-radius: 16px;
+    position: relative;
+    z-index: 2;
+    margin: 0px 0px 80px 0px;
+}
+.statistics-experts__decor {
+    position: absolute;
+    background-color: #ec5863;
+    border-radius: 30px;
+}
+.statistic-experts__decor_1 {
+    width: 65px;
+    height: 65px;
+    transform: rotate(-30deg);
+    bottom: -21px;
+    left: -21px;
+    border-radius: 16px;
+}
+.statistic-experts__decor_2 {
+    width: 97px;
+    height: 97px;
+    top: -40px;
+    right: 50%;
+    transform: rotate(30deg);
+}
+.statistic-experts__decor_3 {
+    width: 128px;
+    height: 128px;
+    transform: rotate(-30deg);
+    right: -55px;
+    top: 0px;
+}
+.body-statistics-experts {
+    padding: 25px 80px;
+    display: flex;
+    align-items: center;
+}
+.body-statistics-experts__item {
+    flex: 1 1 25%;
+    text-align: center;
+}
+.body-statistics-experts__item:last-child{
+    flex: 0 1 50%;
+    text-align: center;
+}
+.body-statistics-experts__value {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #EC5863;
+    margin-bottom: 5px;
+}
+.body-statistics-experts__text {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.8;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+/* healthcare */
+
+.healthcare {
+    padding: 80px 0px 30px 0px;
+
+}
+.healthcare__block-text {
+    margin: 0px 0px 45px 0px;
+}
+.healthcare__items {
+    display: flex;
+    max-width: 980px;
+}
+.healthcare__item {
+    flex: 0 1 33.333%;
+}
+.item-healthcare {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    border-radius: 8px;
+    padding: 36px 17px;
+    z-index: 2;
+}
+.item-healthcare__icon {
+    margin: 0px 0px 58px 0px;
+}
+.item-healthcare__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 138.5%;
+    color: #000;
+    margin: 0px 0px 4px 0px;
+}
+.item-healthcare__text {
+    line-height: 138.5%;
+}
+.healthcare__colum{
+    position: relative;
+    padding: 0 36px;
+    flex: 0 1 33.333%;
+}
+.item-healthcare_1::after,
+.item-healthcare_1::before{
+    position: absolute;
+    content: "";
+    background-color: #EC5863;;
+    border-radius: 16px;
+}
+
+.item-healthcare_1::before{
+    width: 65px;
+    height: 65px;
+    bottom: -35px;
+    left: 15px;
+    transform: rotate(-30deg);
+}
+.item-healthcare_1::after{
+    width: 97px;
+    height: 97px;
+    top: 40px;
+    right: -10px;
+    border-radius: 30px;
+    transform: rotate(30deg);
+}
+.item-healthcare_2::after{
+    position: absolute;
+    content: "";
+    background-color: #EC5863;;
+    width: 127px;
+    height: 127px;
+    bottom: -35px;
+    right: -35px;
+    border-radius: 30px;
+    transform: rotate(55deg);
+}
+.item-healthcare_3::after{
+    position: absolute;
+    content: "";
+    background-color: #EC5863;;
+    width: 65px;
+    height: 65px;
+    top: -35px;
+    right: 10px;
+    border-radius: 16px;
+    transform: rotate(-30deg);
+}
+
+/*footer*/
+
+.footer {
+    padding: 45px   ;
+}
+.footer__items {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
